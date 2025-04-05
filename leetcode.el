@@ -245,7 +245,7 @@ python3, ruby, rust, scala, swift, mysql, mssql, oraclesql.")
 (defconst leetcode--all-difficulties '("Easy" "Medium" "Hard"))
 (defconst leetcode--paid "•" "Paid mark.")
 (defconst leetcode--checkmark "✓" "Checkmark for accepted problem.")
-(defconst leetcode--buffer-name             "*leetcode*")
+(defconst leetcode--buffer-name             "leetcode")
 
 (defface leetcode-paid-face
   '((t (:foreground "gold")))
@@ -482,15 +482,15 @@ Such as 'Two Sum' will be converted to 'two-sum'. 'Pow(x, n)' will be 'powx-n'"
 
 (defun leetcode--detail-buffer-name (problem-id)
   "Detail buffer name with PROBLEM-ID."
-  (format "*leetcode-detail-%s*" problem-id))
+  (format "leetcode-detail-%s" problem-id))
 
 (defun leetcode--testcase-buffer-name (problem-id)
   "Testcase buffer name with PROBLEM-ID."
-  (format "*leetcode-testcase-%s*" problem-id))
+  (format "leetcode-testcase-%s" problem-id))
 
 (defun leetcode--result-buffer-name (problem-id)
   "Result buffer name with PROBLEM-ID."
-  (format "*leetcode-result-%s*" problem-id))
+  (format "leetcode-result-%s" problem-id))
 
 (defun leetcode--maybe-focus ()
   "Delete other windows, keep only *leetcode* buffer."
